@@ -16,4 +16,6 @@ Check `examples/` for some examples.
 
 ## Binding to keys
 
-See https://code.visualstudio.com/docs/getstarted/keybindings. Search `Magic Script` to find the available commands.
+See https://code.visualstudio.com/docs/getstarted/keybindings.
+
+Search `Magic Script` to find the available commands.
