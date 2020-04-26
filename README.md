@@ -6,7 +6,9 @@ Run custom Visual Studio Code extension scripts from workspaces.
 
 Place `magic-script.<number>.js` files in your `.vscode` directory in any workspace. This extension exposes `magic-script.runMagicScript<number>` commands that executes it,
 in the currently active workspace.
+
 Replace `<number>` with one between 1 and 9. For example, `.vscode/magic-script.2.js` runs when `magic-script.runMagicScript2` is triggered.
+
 Modules are only required to default-export a function, taking a single optional argument as the numeric index of the script. As the command runs within the editor,
 magic scripts have full access to the vscode module, which can be installed globally or as a dev dependency in your workspace.
 
