@@ -19,3 +19,8 @@ Check `examples/` for some examples.
 See https://code.visualstudio.com/docs/getstarted/keybindings.
 
 Search `Magic Script` to find the available commands.
+
+## Similar extensions
+
+* https://github.com/mkloubert/vs-script-commands
+* https://github.com/egodigital/vscode-powertools
