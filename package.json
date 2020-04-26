@@ -2,7 +2,7 @@
     "name": "vscode-magic-script",
     "displayName": "magic-script",
     "description": "Run custom script from workspace",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "sovietspaceship",
     "engines": {
         "vscode": "^1.44.0"
