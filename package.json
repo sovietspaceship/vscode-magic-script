@@ -1,0 +1,88 @@
+{
+    "name": "vscode-magic-script",
+    "displayName": "magic-script",
+    "description": "Run custom script from workspace",
+    "version": "0.0.1",
+    "publisher": "sovietspaceship",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:magic-script.runMagicScript1",
+        "onCommand:magic-script.runMagicScript2",
+        "onCommand:magic-script.runMagicScript3",
+        "onCommand:magic-script.runMagicScript4",
+        "onCommand:magic-script.runMagicScript5",
+        "onCommand:magic-script.runMagicScript6",
+        "onCommand:magic-script.runMagicScript7",
+        "onCommand:magic-script.runMagicScript8",
+        "onCommand:magic-script.runMagicScript9"
+    ],
+    "repository": "https://github.com/sovietspaceship/vscode-magic-script",
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "magic-script.runMagicScript1",
+                "title": "Run Magic Script 1"
+            },
+            {
+                "command": "magic-script.runMagicScript2",
+                "title": "Run Magic Script 2"
+            },
+            {
+                "command": "magic-script.runMagicScript3",
+                "title": "Run Magic Script 3"
+            },
+            {
+                "command": "magic-script.runMagicScript4",
+                "title": "Run Magic Script 4"
+            },
+            {
+                "command": "magic-script.runMagicScript5",
+                "title": "Run Magic Script 5"
+            },
+            {
+                "command": "magic-script.runMagicScript6",
+                "title": "Run Magic Script 6"
+            },
+            {
+                "command": "magic-script.runMagicScript7",
+                "title": "Run Magic Script 7"
+            },
+            {
+                "command": "magic-script.runMagicScript8",
+                "title": "Run Magic Script 8"
+            },
+            {
+                "command": "magic-script.runMagicScript9",
+                "title": "Run Magic Script 9"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint src --ext ts",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.44.0",
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.11.0",
+        "eslint": "^6.8.0",
+        "@typescript-eslint/parser": "^2.26.0",
+        "@typescript-eslint/eslint-plugin": "^2.26.0",
+        "glob": "^7.1.6",
+        "mocha": "^7.1.1",
+        "typescript": "^3.8.3",
+        "vscode-test": "^1.3.0"
+    }
+}
