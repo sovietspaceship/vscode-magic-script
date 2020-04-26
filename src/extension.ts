@@ -7,7 +7,7 @@ const N_SCRIPTS = 9;
 
 const MAGIC_SCRIPT_PATH = '.vscode/magic-script.$n.js';
 
-type MagicScript = (scriptIndex: number) => Promise<void>;
+type MagicScript = ((scriptIndex: number) => Promise<void>) & { alwaysReload?: boolean };
 
 export function activate(context: vscode.ExtensionContext) {
 	if (!vscode.workspace.rootPath) {
@@ -19,6 +19,9 @@ export function activate(context: vscode.ExtensionContext) {
 		const disposable = vscode.commands.registerCommand(`magic-script.runMagicScript${i}`, async () => {
 			if (await fileExists(scriptPath)) {
 				const magicScript: MagicScript = require(scriptPath);
+				if (magicScript.alwaysReload) {
+					delete require.cache[scriptPath];
+				}
 				try {
 					await magicScript(i);
 				} catch (error) {
